@@ -36,6 +36,11 @@ public class House {
     public House() {
     }
 
+    public House(String address, String description) {
+        this.address = address;
+        this.description = description;
+    }
+
     public House(String address, String description, List<FamilyMember> familyMembers, List<Pet> pets) {
         this.address = address;
         this.description = description;
