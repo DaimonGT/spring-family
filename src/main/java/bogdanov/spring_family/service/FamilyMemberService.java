@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
+
 @Service //помечает класс как компонент бизнес-логики
 @Transactional
 public class FamilyMemberService implements FamilyMemberServiceInterface {
@@ -33,6 +34,7 @@ public class FamilyMemberService implements FamilyMemberServiceInterface {
     }
 
     // получить члена семьи по ID
+    // нужно ли прокидывать ошибку?
     @Transactional
     public Optional<FamilyMember> getFamilyMemberByID(Long id) {
         return familyRepository.findByIdWithHouse(id);
